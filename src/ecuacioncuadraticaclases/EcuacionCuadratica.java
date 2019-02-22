@@ -10,10 +10,10 @@ package ecuacioncuadraticaclases;
  * @author Efraín
  */
 public class EcuacionCuadratica {
-    double x;
-    double y;
-    double z;
-    public EcuacionCuadratica(int x, int y, int z) {
+    private double x;
+    private double y;
+    private double z;
+    public EcuacionCuadratica(double x, double y, double z) {
         this.x = x;
         this.y = y;
         this.z = z;

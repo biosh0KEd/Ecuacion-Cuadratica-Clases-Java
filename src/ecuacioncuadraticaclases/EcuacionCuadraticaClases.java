@@ -27,6 +27,10 @@ public class EcuacionCuadraticaClases {
         double y = Entrada.nextDouble();
         System.out.println("Ingrese el valro de Z:");
         double z = Entrada.nextDouble();
+        EcuacionCuadratica Equ;
+        Equ = new EcuacionCuadratica(x, y, z);
+        System.out.println("El resultado es:");
+        System.out.println(Equ.FormulaGeneral());
         
     }
     
