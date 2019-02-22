@@ -10,5 +10,34 @@ package ecuacioncuadraticaclases;
  * @author Efraín
  */
 public class EcuacionCuadratica {
-    
+    double x;
+    double y;
+    double z;
+    public EcuacionCuadratica(int x, int y, int z) {
+        this.x = x;
+        this.y = y;
+        this.z = z;
+    }
+    public String  FormulaGeneral() {
+        double bCuadrada = y * y;
+        double ac4 = 4 * x * z;
+        double determinante = bCuadrada - ac4;
+        double denominador = 2 * x;
+        if (determinante == 0){
+            String resultado = "" + -y / denominador;
+            return(resultado);
+        }
+        else if (determinante >= 1){
+            double numeradorP = -y + Math.sqrt(determinante);
+            double numeradorN = -y - Math.sqrt(determinante);
+            double resultadoP = numeradorP / denominador;
+            double resultadoN = numeradorN / denominador;
+            return(resultadoN + " y " + resultadoP);
+        }
+        else {
+            double numReal = -y / denominador;
+            double numImaginario = Math.sqrt(-determinante) / denominador;
+            return(numReal + " +/- " + numImaginario + "i");
+        }
+    }
 }
